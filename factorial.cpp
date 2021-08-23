@@ -5,11 +5,15 @@ using namespace std;
 //git is interesting
 
 int factorial(int n){
+    if(n<0){
+        printf("-1\n");
+        return 1;
+    }
     if(n==0)
     return 1;
     while(n<0)
     {   int num;
-        cout<<"Please enter a positive number\n";
+        printf("Please enter a positive number\n");
         cin>>num;
         n=num;
     }
