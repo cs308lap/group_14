@@ -16,10 +16,3 @@ int gcd(int a, int b)
     return gcd(a, b-a);
 
 }
-int main()
-{
-    int a , b ;
-    cin>>a>>b;
-    cout<<"GCD of "<<a<<" and "<<b<<" is "<<gcd(a, b);
-    return 0;
-}
