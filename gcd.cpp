@@ -5,19 +5,23 @@ using namespace std;
 int gcd(int a, int b)
 {
     // Everything divides 0
-    while(a!=b){
-        if (a > b)
-            a-=b;
-        else
-            b-=a;
-    }
-    return a;
-}
+    if (a == 0)
+       return b;
+    if (b == 0)
+       return a;
 
-// Driver program to test above function
+    // base case
+    if (a == b)
+        return a;
+
+    // a is greater
+    if (a > b)
+        return gcd(a-b, b);
+    return gcd(a, b-a);
+}
 int main()
 {
-    int a, b;
+    int a , b ;
     cin>>a>>b;
     cout<<"GCD of "<<a<<" and "<<b<<" is "<<gcd(a, b);
     return 0;
